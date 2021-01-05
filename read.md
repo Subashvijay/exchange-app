@@ -34,3 +34,7 @@ git remote add origin https://github.com/Subashvijay/exchange-app.
    <i class="fas fa-camera fa-5x"></i>
    <i class="fas fa-camera fa-7x"></i>
    <i class="fas fa-camera fa-10x"></i>
+
+https://www.c-sharpcorner.com/article/authentication-and-authorization-in-angular/
+
+https://angular.io/guide/deployment
