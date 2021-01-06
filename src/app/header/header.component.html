@@ -1,18 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <i class="fab fa-angrycreative btn-warning p-2 mr-2" style="font-size:30px ;"></i>
+    <a routerLink="">
+        <i class="fab fa-angrycreative btn-warning p-2 mr-2" style="font-size:30px ;"></i>
+
+    </a>
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" style="width: auto;width: 238px;" type="search" placeholder="Search"
-            aria-label="Search">
-        <button class="btn btn-warning my-2 my-sm-0 ml-2" type="submit">
+    <form class="form-inline col-md-6  col-12 my-2 my-lg-0">
+        <input class="form-control col-10 mr-2" style="" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-warning my-2 my-sm-0 " type="submit">
             <i class="fas fa-search"></i>
         </button>
     </form>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -35,15 +37,49 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
-            <li>
-                <button class="btn btn-warning" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    style="width: 100%;" type="button">Login</button>
+            <li class="d-lg-none">
+                <a class="btn btn-warning  d-lg-none" routerLink="/login" style="width: 100%;" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" type="button">Login</a>
             </li>
-            <li>
-                <button class="btn btn-warning mt-2 ml-md-2 ml-0 mt-md-0" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" style="width: 100%;" type="button">SignUp</button>
+
+            <li class="d-none d-lg-block">
+                <a class="d-none d-lg-block btn btn-warning" routerLink="/login" style="width: 100%;"
+                    type="button">Login</a>
             </li>
+
         </ul>
 
     </div>
 </nav>
+
+<div class="nav-scroller navbar-dark  bg-dark">
+    <nav class="nav d-flex align-items-center">
+
+        <a class="text-white mx-2" href="#">Dashboard</a>
+        <a class="text-white mx-2" href="#">
+            Friends
+            <span class="badge badge-pill text-dark bg-light align-text-bottom">27</span>
+        </a>
+        <div class="mx-2">
+            <i class="fas fa-hamburger text-primary mx-6 " style="font-size:20px ;"></i>
+            <small class="form-text m-0">Burger</small>
+        </div>
+        <div class="mx-2">
+            <i class="fas fa-hamburger text-warning bg-dark " style="font-size:20px ;"></i>
+            <small class="form-text m-0">Burger</small>
+        </div>
+        <div class="mx-2">
+            <i class="fas fa-hamburger text-danger bg-dark " style="font-size:20px ;"></i>
+            <small class="form-text m-0">Burger</small>
+        </div>
+        <div class="mx-2">
+            <i class="fas fa-hamburger text-secondary bg-dark " style="font-size:20px ;"></i>
+            <small class="form-text m-0">Burger</small>
+        </div>
+        <div class="mx-2">
+            <i class="fas fa-hamburger bg-dark " style="font-size:20px ;"></i>
+            <small class="form-text m-0">Burger</small>
+        </div>
+
+    </nav>
+</div>

@@ -38,3 +38,6 @@ git remote add origin https://github.com/Subashvijay/exchange-app.
 https://www.c-sharpcorner.com/article/authentication-and-authorization-in-angular/
 
 https://angular.io/guide/deployment
+
+ng build --prod --output-path docs --base-href /<project_name>/
+ng build --prod --output-path docs --base-href exchange-app
