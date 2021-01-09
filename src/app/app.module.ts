@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 // services
 import { UserLoginService } from './user-login.service';
-import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
