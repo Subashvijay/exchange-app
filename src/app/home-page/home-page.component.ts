@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
 
   constructor() { }
-
+  carasaImgSrc: string[] = [
+    '944',
+    '110',
+    '1000',
+    '900'
+  ]
   ngOnInit(): void {
   }
 

@@ -6,7 +6,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        <a class="badge badge-danger ml-1">Login</a>
+        <a *ngIf="!isLoged" class="badge badge-danger ml-1">Login</a>
+        <i *ngIf="isLoged" class="fas fa-shopping-cart text-danger mx-8 mt-1" style="font-size:25px ;"></i>
+
     </button>
     <form class="form-inline col-md-6 p-0  col-12 my-2 my-lg-0">
         <input class="form-control col-sm-10 col  " type="search" placeholder="Search" aria-label="Search">
@@ -38,13 +40,23 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
             <li class="d-lg-none">
-                <a class="btn btn-warning  d-lg-none" routerLink="/login" style="width: 100%;" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" type="button">Login</a>
+                <a *ngIf="!isLoged" class="btn btn-warning  d-lg-none" routerLink="/login" style="width: 100%;"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" type="button">Login</a>
+                <a *ngIf="isLoged" class="btn btn-warning  d-lg-none" routerLink="/login" style="width: 100%;"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" type="button" style="font-size:15px ;">
+                    <i class="fas fa-shopping-cart text-dark mx-8 mt-1"></i>
+
+                    Go to Cart(0)</a>
             </li>
 
             <li class="d-none d-lg-block ">
-                <a class="d-none d-lg-block btn btn-warning" routerLink="/login" style="width: 100%;"
+                <a *ngIf="!isLoged" class="d-none d-lg-block btn btn-warning" routerLink="/login" style="width: 100%;"
                     type="button">Login</a>
+                <a *ngIf="isLoged" class="btn btn-warning  d-none d-lg-block" routerLink="/login" style="width: 100%;"
+                    type="button" style="font-size:15px ;">
+                    <i class="fas fa-shopping-cart text-dark mx-8 mt-1"></i>
+
+                    Go to Cart(0)</a>
             </li>
 
         </ul>

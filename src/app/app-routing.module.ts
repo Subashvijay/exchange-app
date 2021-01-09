@@ -6,8 +6,8 @@ import { LogInSignUpComponent } from './header/log-in-sign-up/log-in-sign-up.com
 import { HomePageComponent } from './home-page/home-page.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LogInSignUpComponent }
-
+  { path: 'login', component: LogInSignUpComponent },
+  { path: '**', component: HomePageComponent }
 ];
 
 @NgModule({

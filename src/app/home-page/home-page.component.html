@@ -1,21 +1,12 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: max-content;">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <ol class="carousel-indicators ">
+        <li *ngFor="let image of carasaImgSrc let i = index " data-target="#carouselExampleIndicators"
+            data-slide-to={{index+1}}></li>
     </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbgagU9DbYROywMXVCgvbBP9HeCisET83Uw&usqp=CAU"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDa6P9ZkIKVoxI6yBLd_0TCSO3n2tXKt2RNw&usqp=CAU"
-                class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgRXSFZB1dHSWeuTEw4fgUfXsUzSfF9B_DOw&usqp=CAU"
-                class="d-block w-100" alt="...">
+    <div class="carousel-inner ">
+        <div *ngFor="let image of carasaImgSrc let i = index " class="carousel-item car-img w-100 "
+            [ngClass]="i ==0 ?'active':''">
+            <img [src]="'https://picsum.photos/id/'+image+'/400/100'" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
