@@ -8,7 +8,6 @@
         <span class="navbar-toggler-icon"></span>
         <a *ngIf="!isLoged" class="badge badge-danger ml-1">Login</a>
         <i *ngIf="isLoged" class="fas fa-shopping-cart text-danger mx-8 mt-1" style="font-size:25px ;"></i>
-
     </button>
     <form class="form-inline col-md-6 p-0  col-12 my-2 my-lg-0">
         <input class="form-control col-sm-10 col  " type="search" placeholder="Search" aria-label="Search">
@@ -45,77 +44,26 @@
                 <a *ngIf="isLoged" class="btn btn-warning  d-lg-none" routerLink="/login" style="width: 100%;"
                     data-toggle="collapse" data-target="#navbarSupportedContent" type="button" style="font-size:15px ;">
                     <i class="fas fa-shopping-cart text-dark mx-8 mt-1"></i>
-
-                    Go to Cart(0)</a>
+                    Cart(0)</a>
             </li>
-
             <li class="d-none d-lg-block ">
                 <a *ngIf="!isLoged" class="d-none d-lg-block btn btn-warning" routerLink="/login" style="width: 100%;"
                     type="button">Login</a>
                 <a *ngIf="isLoged" class="btn btn-warning  d-none d-lg-block" routerLink="/login" style="width: 100%;"
                     type="button" style="font-size:15px ;">
                     <i class="fas fa-shopping-cart text-dark mx-8 mt-1"></i>
-
-                    Go to Cart(0)</a>
+                    Cart(0)</a>
             </li>
-
         </ul>
-
     </div>
 </nav>
 
 <div class="nav-scroller navbar-dark  bg-dark">
     <nav class="nav d-flex align-items-center">
-
-        <div class="mx-2">
-            <i class="fas fa-shopping-cart text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Grocery</small>
+        <div *ngFor="let icon of navScrollitems let i = index" (click)="navScrollClick(i)" class="px-3 mx-sm-0"
+            [ngClass]="icon.active ? 'scroll-active': ''" style="width: 100px;">
+            <i class="fas text-white mx-6 mt-1" class={{icon.icon}} style="font-size:20px ;"></i>
+            <small class="form-text m-0">{{icon.name}}</small>
         </div>
-        <div class="mx-2">
-            <i class="fas fa-mobile-alt text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Mobile</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-book text-white mx-6 mt-1 " style="font-size:20px ;"></i>
-            <small class="form-text m-0">Book</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-male text-white mx-6 mt-1 " style="font-size:20px ;"></i>
-            <small class="form-text m-0">Mens</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-female text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Women</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-headphones-alt text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Headphones</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-tv text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Telivision</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-hamburger text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Fast Food</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-car text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">cars</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-fish text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Fish</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-motorcycle text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Motorcycle</small>
-        </div>
-        <div class="mx-2">
-            <i class="fas fa-baseball-ball text-white mx-6 mt-1" style="font-size:20px ;"></i>
-            <small class="form-text m-0">Sports</small>
-        </div>
-
-
     </nav>
 </div>

@@ -6,17 +6,20 @@
     </div>
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input formControlName="email" type="email" id="inputEmail" class="form-control" placeholder="Email address"
-        required autofocus>
+    <input formControlName="email" type="email" id="inputEmail" class="form-control"
+        [ngClass]=" !loginform.get('email').valid && loginform.get('email').touched   ? 'is-invalid': ''"
+        placeholder="Email address" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
-    <input formControlName="password" type="password" id="inputPassword" class="form-control" placeholder="Password"
-        required>
+    <input formControlName="password" type="password" id="inputPassword" class="form-control "
+        [ngClass]=" !loginform.get('password').valid && loginform.get('password').touched   ? 'is-invalid': ''"
+        placeholder="Password" required>
+
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
-    <button *ngIf="!loading" class="btn btn-lg btn-warning btn-block" (click)="login()">
+    <button *ngIf="!loading" [disabled]="!loginform.valid" class="btn btn-lg btn-warning btn-block" (click)="login()">
         LogIn</button>
     <button *ngIf="loading" class="btn btn-warning  btn-block" type="button" disabled>
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
