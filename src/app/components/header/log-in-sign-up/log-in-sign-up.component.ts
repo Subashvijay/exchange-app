@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserLoginService } from '../../user-login.service';
+import { Subscription } from 'rxjs';
+import { UserLoginService } from '../../../services/user-login.service';
 @Component({
   selector: 'app-log-in-sign-up',
   templateUrl: './log-in-sign-up.component.html',
@@ -14,14 +15,14 @@ export class LogInSignUpComponent implements OnInit {
   loginform: FormGroup;
   loading = false;
   isLoged: boolean;
+  subscriptions: Subscription;
   ngOnInit(): void {
-    this.userLoginService.islogedIn.subscribe(x => {
+    this.subscriptions = this.userLoginService.islogedIn.subscribe((x) => {
       if (x) {
         this.router.navigate(['home']);
       }
     }
     );
-
     this.createLoginForm();
   }
 
@@ -32,8 +33,7 @@ export class LogInSignUpComponent implements OnInit {
     });
   }
 
-  login() {
-
+  login(): void {
     if (this.loginform.valid) {
       this.loading = true;
       setTimeout(() => {
