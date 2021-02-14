@@ -1,12 +1,12 @@
 <div id="carouselExampleIndicators" class="carousel slide m-2" data-ride="carousel" style="height: max-content;">
     <ol class="carousel-indicators">
         <li *ngFor="let image of carasaImgSrc let i = index " data-target="#carouselExampleIndicators"
-            data-slide-to={{index+1}}></li>
+            data-slide-to={{index}}></li>
     </ol>
     <div class="carousel-inner ">
         <div *ngFor="let image of carasaImgSrc let i = index " class="carousel-item car-img w-100 "
             [ngClass]="i ==0 ?'active':''">
-            <img [src]="'https://picsum.photos/900/300?random='+i" class="d-block rounded w-100" alt="...">
+            <img [src]="'https://picsum.photos/600/200?random='+i" class="d-block rounded w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

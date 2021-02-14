@@ -37,3 +37,8 @@ $exchange-app-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+input.ng-dirty.ng-invalid {
+  color: red
+}

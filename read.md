@@ -41,3 +41,9 @@ https://angular.io/guide/deployment
 
 ng build --prod --output-path docs --base-href /<project_name>/
 ng build --prod --output-path docs --base-href exchange-app
+
+AngularFirestoreModule, // Only required for database features
+AngularFireAuthModule, // Only required for auth features,
+AngularFireStorageModule // Only required for storage features
+
+https://jsonworld.com/demo/how-to-connect-firebase-with-angular-8-application

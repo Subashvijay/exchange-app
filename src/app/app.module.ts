@@ -12,20 +12,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 // services
 import { UserLoginService } from './services/user-login.service';
 import { SignUpComponent } from './components/header/log-in-sign-up/sign-up/sign-up.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogInSignUpComponent,
     HomePageComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule, // Only required for auth features,
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]
